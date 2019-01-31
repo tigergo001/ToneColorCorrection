@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AE751B09-E82F-3BA0-A19D-F4386180DCED}</ProjectGuid>
+    <RootNamespace>Demo</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\bin\release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>Demo</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\bin\debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>Demo</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\bin\release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Demo</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin\debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Demo</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\ToneColorCorrection;..\..\..\..\3rdLibs\opencv\include;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtPrintSupport;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtUiTools;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtWidgets;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtGui;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtANGLE;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtCore;release;\include;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;QT_NO_DEBUG;QT_PRINTSUPPORT_LIB;QT_UITOOLS_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\qtmain.lib;shell32.lib;..\bin\debug\ToneColorCorrection.lib;D:\3rdLibs\opencv\x86\vc14\lib\opencv_core330d.lib;D:\3rdLibs\opencv\x86\vc14\lib\opencv_highgui330d.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5PrintSupport.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5UiTools.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Widgets.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Gui.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Core.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Widgets.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Gui.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib;C:\opensslx86\lib;C:\Utils\my_sql\mysql-5.6.11-win32\lib;C:\Utils\postgresqlx86\pgsql\lib;..\bin\debug;D:\3rdLibs\opencv\x86\vc14\lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\Demo.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;QT_NO_DEBUG;QT_PRINTSUPPORT_LIB;QT_UITOOLS_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\ToneColorCorrection;..\..\..\..\3rdLibs\opencv\include;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtPrintSupport;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtUiTools;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtWidgets;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtGui;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtANGLE;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\include\QtCore;debug;\include;..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;QT_PRINTSUPPORT_LIB;QT_UITOOLS_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\qtmaind.lib;shell32.lib;..\bin\debug\ToneColorCorrection.lib;D:\3rdLibs\opencv\x86\vc14\lib\opencv_core330d.lib;D:\3rdLibs\opencv\x86\vc14\lib\opencv_highgui330d.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5PrintSupportd.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5UiToolsd.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Widgetsd.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Guid.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Cored.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Widgetsd.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Guid.lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib;C:\opensslx86\lib;C:\Utils\my_sql\mysql-5.6.11-win32\lib;C:\Utils\postgresqlx86\pgsql\lib;..\bin\debug;D:\3rdLibs\opencv\x86\vc14\lib;D:\Qt\Qt5.11.2\5.11.2\msvc2015\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\Demo.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;QT_PRINTSUPPORT_LIB;QT_UITOOLS_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ColorCorrectForm.cpp" />
+    <ClCompile Include="Demo.cpp" />
+    <ClCompile Include="imageviewer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ColorCorrectForm.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ColorCorrectForm.h;release\moc_predefs.h;D:\Qt\Qt5.11.2\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Qt\Qt5.11.2\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_UITOOLS_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/????/OpencvSamples/ToneColorCorrection/Demo/release/moc_predefs.h -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/mkspecs/win32-msvc -ID:/????/OpencvSamples/ToneColorCorrection/Demo -ID:/????/OpencvSamples/ToneColorCorrection/ToneColorCorrection -ID:/3rdLibs/opencv/include -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtPrintSupport -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtUiTools -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtWidgets -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtGui -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtANGLE -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\winrt" ColorCorrectForm.h -o release\moc_ColorCorrectForm.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ColorCorrectForm.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_ColorCorrectForm.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ColorCorrectForm.h;debug\moc_predefs.h;D:\Qt\Qt5.11.2\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Qt\Qt5.11.2\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_PRINTSUPPORT_LIB -DQT_UITOOLS_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/????/OpencvSamples/ToneColorCorrection/Demo/debug/moc_predefs.h -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/mkspecs/win32-msvc -ID:/????/OpencvSamples/ToneColorCorrection/Demo -ID:/????/OpencvSamples/ToneColorCorrection/ToneColorCorrection -ID:/3rdLibs/opencv/include -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtPrintSupport -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtUiTools -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtWidgets -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtGui -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtANGLE -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\winrt" ColorCorrectForm.h -o debug\moc_ColorCorrectForm.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ColorCorrectForm.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_ColorCorrectForm.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="imageviewer.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">imageviewer.h;release\moc_predefs.h;D:\Qt\Qt5.11.2\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Qt\Qt5.11.2\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_UITOOLS_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/????/OpencvSamples/ToneColorCorrection/Demo/release/moc_predefs.h -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/mkspecs/win32-msvc -ID:/????/OpencvSamples/ToneColorCorrection/Demo -ID:/????/OpencvSamples/ToneColorCorrection/ToneColorCorrection -ID:/3rdLibs/opencv/include -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtPrintSupport -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtUiTools -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtWidgets -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtGui -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtANGLE -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\winrt" imageviewer.h -o release\moc_imageviewer.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC imageviewer.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_imageviewer.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">imageviewer.h;debug\moc_predefs.h;D:\Qt\Qt5.11.2\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Qt\Qt5.11.2\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_PRINTSUPPORT_LIB -DQT_UITOOLS_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/????/OpencvSamples/ToneColorCorrection/Demo/debug/moc_predefs.h -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/mkspecs/win32-msvc -ID:/????/OpencvSamples/ToneColorCorrection/Demo -ID:/????/OpencvSamples/ToneColorCorrection/ToneColorCorrection -ID:/3rdLibs/opencv/include -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtPrintSupport -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtUiTools -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtWidgets -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtGui -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtANGLE -ID:/Qt/Qt5.11.2/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\\winrt" imageviewer.h -o debug\moc_imageviewer.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC imageviewer.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_imageviewer.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_ColorCorrectForm.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_ColorCorrectForm.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_imageviewer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_imageviewer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl -BxD:\Qt\Qt5.11.2\5.11.2\msvc2015\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl -BxD:\Qt\Qt5.11.2\5.11.2\msvc2015\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\..\Qt\Qt5.11.2\5.11.2\msvc2015\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
